@@ -1,14 +1,7 @@
-const { Roupa } = require("../models/roupas");
+const Roupa = require("../models/roupas");
 
 // Criar uma nova roupa
-exports.createRoupa = async (req, res) => {
-  try {
-    const roupa = await Roupa.create(req.body);
-    res.status(201).json(roupa);
-  } catch (error) {
-    res.status(500).json({ error: "Erro ao criar roupa" });
-  }
-};
+exports.createRoupa = async (req, res) => {};
 
 // Listar todas as roupas
 exports.getRoupas = async (req, res) => {

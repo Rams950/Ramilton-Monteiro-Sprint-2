@@ -4,7 +4,7 @@ const express = require("express");
 const router = express.Router();
 const roupaController = require("../controllers/roupaController");
 
-router.post("/roupas", roupaController.createRoupa);
+router.post("/newRoupas", roupaController.createRoupa);
 
 router.get("/roupas", roupaController.getRoupas);
 

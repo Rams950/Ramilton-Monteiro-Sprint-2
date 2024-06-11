@@ -1,12 +1,20 @@
-const { Cliente } = require("../models/Cliente");
+const Cliente = require("../models/Cliente");
 
 // Criar um novo cliente
-exports.createCliente = async (req, res) => {
+exports.postNewClient = async (req, res) => {
+  const { nome, email, telefone, endereco } = req.body;
   try {
-    const cliente = await Cliente.create(req.body);
-    res.status(201).json(cliente);
-  } catch (error) {
-    res.status(500).json({ error: "Erro ao criar cliente" });
+    //porque os o que mais pode diferir os clientes sao seus emails
+    const existingClient = await Cliente.findOne({ where: { email } });
+
+    if (existingClient) {
+      return res.status(400).json({ msg: "Este cliente já existe" });
+    }
+    const newClient = await Cliente.create({ nome, email, telefone, endereco });
+    res.status(200).json({ client: newClient });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Erro nas profundezas" });
   }
 };
 

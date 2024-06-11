@@ -1,4 +1,4 @@
-const { Medida } = require("../models/medida");
+const Medida = require("../models/medida");
 
 // Criar uma nova medida
 exports.createMedida = async (req, res) => {

@@ -1,6 +1,5 @@
 const envs = require("../utils/config");
 
-
 const Sequelize = require("sequelize");
 
 const config = require("../config/config.json")[`${envs.AMBIENTE}`];

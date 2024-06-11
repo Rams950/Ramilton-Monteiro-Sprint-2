@@ -5,7 +5,7 @@ const medidaController = require("../controllers/medidaController");
 
 const router = express.Router();
 
-router.post("/medidas", medidaController.createMedida);
+router.post("/newMedidas", medidaController.createMedida);
 
 router.get("/medidas", medidaController.getMedidas);
 

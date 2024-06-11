@@ -5,7 +5,7 @@ const clienteController = require("../controllers/clienteController");
 
 const router = express.Router();
 
-router.post("/clientes", clienteController.createCliente);
+router.post("/newClient", clienteController.postNewClient);
 
 router.get("/clientes", clienteController.getClientes);
 
