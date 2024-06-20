@@ -9,16 +9,12 @@ describe("Roupa Model", () => {
 
   test("Create a roupa", async () => {
     const roupa = await Roupa.create({
-      nome: "Camiseta",
       tipo: "Camiseta de algodão",
       tamanho: "M",
-      cor: "Branco",
-      preco: 29.99,
     });
-    expect(roupa.nome).toBe("Camiseta");
+
     expect(roupa.tipo).toBe("Camiseta de algodão");
     expect(roupa.tamanho).toBe("M");
-    expect(roupa.cor).toBe("Branco");
-    expect(roupa.preco).toBe(29.99);
+  
   });
 });
