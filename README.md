@@ -1,5 +1,3 @@
-Claro! Aqui está um `README.md` mais completo e detalhado para o seu projeto "Guardamedida":
-
 ```markdown
 # Guardamedida
 
